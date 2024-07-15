@@ -5,6 +5,14 @@ require_once 'config/db.php';
 require_once 'config/parameters.php';
 require_once 'helpers/utils.php';
 
+$current_url = $_SERVER['REQUEST_URI'];
+
+
+if ($current_url == '/links/' || $current_url == '/links') {
+    header('Location: /links/inicio/index');
+    exit; 
+}
+
 function show_error(){
 	$error = new ErrorController();
 	$error->index();
