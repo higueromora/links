@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const searchSubcategoria = document.getElementById('searchSubcategoria');
     const urlInput = document.getElementById('url');
     const claseinput = document.getElementById('clase');
-    const claseinput2 = document.getElementById('clase2');
+    const claseinput2 = document.getElementById('nuevaClase');
 
     subcategoriaSelect.addEventListener('change', function() {
         const selectedOption = subcategoriaSelect.options[subcategoriaSelect.selectedIndex];
