@@ -20,7 +20,7 @@ require_once 'views/layout/header.php';
 <div id="resources" class="fila-grid configuracion">
     <?php while($recu = $recursos->fetch_object()): ?>
         <?php $favorito = ($recu->favorito == "SI") ? "Favoritos⭐" : ""; ?> 
-        <div class="button" data-fav="<?=$favorito;?>" data-filtered="<?=$recu->clase;?>" data-id="<?=$recu->id;?>">
+        <div class="button <?=$favorito;?>" data-filtered="<?=$recu->clase;?>" data-id="<?=$recu->id;?>">
             <a href="<?=$recu->url;?>" target="_blank">
                 <p>
                     <?=$recu->subcategoria;?>
@@ -51,7 +51,7 @@ require_once 'views/layout/header.php';
             } else {
                 $('.button').hide();
                 $('.button').filter(function() {
-                    return $(this).data('filtered') === filter || $(this).data('fav') === filter;
+                    return $(this).data('filtered') === filter || $(this).hasClass(filter);
                 }).show();
             }
         });
@@ -71,10 +71,10 @@ require_once 'views/layout/header.php';
                 success: function (response) {
                     if (data === 'SI') {
                         $('.btn-fav[data-id="'+id+'"]').attr('src', '<?=base_url?>assets/img/favorito.svg');
-                        claseButton.addClass(' Favoritos⭐');
+                        claseButton.addClass('Favoritos⭐');
                     } else {
                         $('.btn-fav[data-id="'+id+'"]').attr('src', '<?=base_url?>assets/img/nofavorito.svg');
-                        claseButton.removeClass(' Favoritos⭐');
+                        claseButton.removeClass('Favoritos⭐');
                     }
                     console.log(response);
                 },
@@ -84,6 +84,4 @@ require_once 'views/layout/header.php';
             });
         });
     });
-
-
 </script>
