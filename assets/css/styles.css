@@ -330,6 +330,7 @@ summary {
     list-style: none;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: #537d81;
 }
 
@@ -357,8 +358,6 @@ details[open] summary {
 
 .cubes {
     position: absolute;
-    top: 45%;
-    left: 50%;
     transform-style: preserve-3d;
   }
   

@@ -20,7 +20,7 @@ require_once 'views/layout/header.php';
         <input type="email" name="email" required>
 
         <label for="password">Contraseña</label>
-        <input type="password" name="password" required>
+        <input type="password" name="password" required placeholder="contraseña de 6 caracteres">
 
         <input class="btn-blue" type="submit" value="Registrarse">
         </form>

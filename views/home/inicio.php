@@ -19,11 +19,13 @@ require_once 'views/layout/header.php';
 <details>
     <summary>
         <div class="eyes-left">
-            <img src="<?=base_url?>assets/img/eyes.svg" alt="">
+            <img src="<?=base_url?>assets/img/click.png" alt="">
         </div>    
-        
+        <div>
+            Instrucciones
+        </div>
         <div class="eye-right">
-            <img src="<?=base_url?>assets/img/eyes.svg" alt="">
+            <img src="<?=base_url?>assets/img/click.svg" alt="">
         </div>
     </summary>
     <p>Crear una categoría principal. Por ejemplo Música</p>
