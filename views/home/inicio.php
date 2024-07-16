@@ -29,5 +29,5 @@ require_once 'views/layout/header.php';
         </div>
     </summary>
     <p>Crear una categoría principal. Por ejemplo Música</p>
-    <p>Crear las subcategorías. Por ejemplo youtube,spotify y que esten dentro de música</p>
+    <p>Crear el recuro con su enlace web. Por ejemplo youtube,spotify y que esten dentro de música</p>
 </details>
