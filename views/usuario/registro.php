@@ -21,7 +21,7 @@ require_once 'views/layout/header.php';
 
         <label for="password">Contraseña</label>
         <input type="password" name="password" required placeholder="contraseña de 6 caracteres">
-
+        <br>
         <input class="btn-blue" type="submit" value="Registrarse">
         </form>
         </div>

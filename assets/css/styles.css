@@ -73,6 +73,10 @@ a{
     color: var(--color);
     z-index: 1;
     font-weight: bold;
+    min-height: 182px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
    
 .button::before, .button::after {
@@ -99,8 +103,8 @@ a{
 }
 
 .button:hover::before, .button:hover::after {
-    height: 410px;
-    width: 410px;
+    height: 500px;
+    width: 500px;
 }
 
 .button:hover {
@@ -484,4 +488,13 @@ details[open] summary {
   
   .item:nth-child(6):after {
     color: #ffda77;
+  }
+
+
+  /* Media */
+
+  @media screen and (min-width: 520px) {
+    .crear-recurso, .actualizar-recurso, .borrar-recurso, .login {
+        width: 450px;
+    }
   }

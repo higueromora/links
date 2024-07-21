@@ -10,6 +10,7 @@ require_once 'views/layout/header.php';
                 <input type="email" name="email" required>
                 <label for="password">Contraseña</label>
                 <input type="password" name="password" required>
+                <br>
                 <input class="btn-blue" type="submit" value="Iniciar Sesión">
             </form>
         </div>

@@ -9,7 +9,7 @@ require_once 'views/layout/header.php';
             <h1>Crear nuevo recurso</h1>
             <form id="formulario-creado" method="POST" class="style-flex">
                 <label for="subcategoria">Título de tu recurso</label>
-                <input type="text" name="subcategoria" required>
+                <input type="text" name="subcategoria" required maxlength="51">
         
                 <label for="url">Url de tu recurso</label>
                 <input type="text" name="url" required>
@@ -39,7 +39,7 @@ require_once 'views/layout/header.php';
                     <?php endwhile; ?>
                 </select>
                 <label for="nuevaSubcategoria">Nuevo nombre</label>
-                <input type="text" name="nuevaSubcategoria" id="nuevaSubcategoria" placeholder="Nuevo nombre">
+                <input type="text" name="nuevaSubcategoria" id="nuevaSubcategoria" placeholder="Nuevo nombre" maxlength="51">
                 <br>
                 <label for="url">Url a actualizar</label>
                 <input type="text" name="url" id="url" placeholder="Url a actualizar" readonly>
@@ -72,6 +72,9 @@ require_once 'views/layout/header.php';
             <div id="resultado-borrado"></div>
             <h1>Borrar Recurso</h1>
             <form id="formulario-borrado" method="POST" class="style-flex">
+                <label for="searchSubcategoriadelete">Limita tu búsqueda de recurso a actualizar</label>
+                <input type="text" id="searchSubcategoriadelete" placeholder="Buscar recurso a borrar">
+                <br>
                 <label for="subcategoria-borrar">Recurso a borrar</label>
                 <select id="subcategoria-borrar" name="subcategoria-borrar">
                     <?php while($subcat = $subcategorias3->fetch_object()): ?>

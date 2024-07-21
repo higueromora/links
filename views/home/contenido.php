@@ -25,12 +25,12 @@ require_once 'views/layout/header.php';
                 <p>
                     <?=$recu->subcategoria;?>
                 </p>
-                <?php if($recu->favorito == "NO"): ?>
-                    <img class="btn-fav" data-id="<?=$recu->id;?>" src="<?=base_url?>assets/img/nofavorito.svg">
-                <?php elseif($recu->favorito == "SI"): ?>
-                    <img class="btn-fav" data-id="<?=$recu->id;?>" src="<?=base_url?>assets/img/favorito.svg">
-                <?php endif; ?>
             </a>
+            <?php if($recu->favorito == "NO"): ?>
+                <img class="btn-fav" data-id="<?=$recu->id;?>" height="64px" src="<?=base_url?>assets/img/nofavorito.svg" style="align-self: baseline;">
+            <?php elseif($recu->favorito == "SI"): ?>
+                <img class="btn-fav" data-id="<?=$recu->id;?>" height="64px" src="<?=base_url?>assets/img/favorito.svg" style="align-self: baseline;">
+            <?php endif; ?>
         </div>
     <?php endwhile; ?>
 </div>

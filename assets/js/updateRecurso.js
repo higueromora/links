@@ -42,4 +42,36 @@ document.addEventListener('DOMContentLoaded', function(){
             subcategoriaSelect.value = "";
         }
     });
+
+    const searchSubcategoriadelete = document.getElementById('searchSubcategoriadelete');
+    const subcategoriaborrar = document.getElementById('subcategoria-borrar');
+
+    searchSubcategoriadelete.addEventListener('input', function(){
+        const filter = searchSubcategoriadelete.value.toLowerCase();
+        const options = subcategoriaborrar.options;
+        let firstVisibleOption = null;
+
+        for (let i = 0; i < options.length; i++) {
+            const option = options[i];
+            const text = option.text.toLowerCase();
+
+            if (text.startsWith(filter)) {
+                option.style.display = "";
+                if (firstVisibleOption === null) {
+                    firstVisibleOption = option;
+                }
+            } else {
+                option.style.display = "none";
+            }
+        }
+
+        if (firstVisibleOption) {
+            subcategoriaborrar.value = firstVisibleOption.value;
+            subcategoriaborrar.dispatchEvent(new Event('change'));
+        } else {
+            subcategoriaborrar.value = "";
+        }
+
+    });
+
 });
