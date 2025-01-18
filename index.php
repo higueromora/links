@@ -8,7 +8,7 @@ require_once 'helpers/utils.php';
 $current_url = $_SERVER['REQUEST_URI'];
 
 
-if ($current_url == '/links/' || $current_url == '/links') {
+if ($current_url == '/links/' || $current_url == '/links' || $current_url == '/linkS/' ) {
     header('Location: /links/inicio/index');
     exit; 
 }
